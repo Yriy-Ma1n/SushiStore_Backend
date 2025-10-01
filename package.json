@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "supertest": "^7.1.4",
     "vitest": "^3.2.4"
   }
