@@ -1,0 +1,10 @@
+Here is gonna be functions that will make request to data base and will return { data, error }
+Example:
+
+File Name: "productsModel.ts"
+
+import { supabase } from "..."
+
+export fucntion getAllProduct(){
+    return supabase.from("products").select("*")
+}

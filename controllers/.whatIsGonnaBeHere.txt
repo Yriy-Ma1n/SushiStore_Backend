@@ -1,0 +1,19 @@
+Here is gonna be logic of request 
+Example:
+
+request to '/getProduct'
+
+export async function getProducts(req, res, next) {
+  try {
+
+    const products = await fetchProducts();
+    res.json(products);
+
+  } catch (err) {
+
+    next(err);
+
+  }
+}
+
+

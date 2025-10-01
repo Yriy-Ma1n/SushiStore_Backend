@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { getProducts, getProduct } from '../controllers/productsController.js';
+
+const router = Router();
+
+router.get('/', getProducts);
+router.get('/:id', getProduct);
+
+export default router;
+
+how to connect the route?
+
+app.use('route', functions)

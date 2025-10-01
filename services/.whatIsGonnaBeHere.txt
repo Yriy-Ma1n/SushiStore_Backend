@@ -1,0 +1,11 @@
+services:
+Here is gonna be functions that will return data after request to database
+Example:
+
+function fetchProduct(){
+  const { data, error } = await getAllProducts(); request to data base
+
+  if (error) throw error; if error throw error
+
+  return data; in different way return data
+}
