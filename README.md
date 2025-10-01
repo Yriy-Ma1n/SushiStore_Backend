@@ -8,16 +8,37 @@
 
 The project is built on the principle of separation of responsibilities:
 
-routes/ – only routes (API).
-controllers/ – accept a request, return an answer.
-services/ – business-logic (checks, rules).
-models/ – work with database (requests).
-middlewares/ – common logic (authorization, errors).
-utils/ – auxiliary functions
-config/ – setting (env, clients).
+<div>
+  routes/ – only routes (API).
+</div>
+<div>
+  controllers/ – accept a request, return an answer.
+</div>
 
+<div>
+  services/ – business-logic (checks, rules).
+</div>
+
+<div>
+  models/ – work with database (requests).
+</div>
+
+<div>
+  middlewares/ – common logic (authorization, errors).
+</div>
+
+<div>
+  utils/ – auxiliary functions
+</div>
+
+<div>
+  config/ – setting (env, clients).
+</div>
+
+<br>
 ✅ advantage of the structure
-
+<br>
+<br>
 Distinct layers — easy to read and support code
 Scalability — just add new features
 Reuse — services and models can be used in different places
