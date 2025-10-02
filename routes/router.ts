@@ -1,9 +1,11 @@
-// import { Router } from "express"
+import { Router } from "express"
 
-// import { getProducts, getProduct } from "../controllers/ProductController.ts"
 
-// export const router = Router()
 
-// router.get('/', getProducts)
+import { getProducts, getProduct } from "../controllers/ProductController.js"
 
-// router.get('/:id', getProduct)
+export const router = Router()
+
+router.get('/', getProducts)
+
+router.get('/:id', getProduct)

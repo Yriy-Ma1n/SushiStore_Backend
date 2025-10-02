@@ -1,7 +1,7 @@
 
 import type { Request, Response, NextFunction } from "express";
 
-import { fetchProduct, fetchProducts } from "../services/ProductService.ts";
+import { fetchProduct, fetchProducts } from "../services/ProductService.js";
 
 
 //function for route
@@ -9,7 +9,7 @@ export async function getProducts(req: Request, res: Response, next: NextFunctio
 
     try {
         const products = await fetchProducts()
-        console.log(products, 'product')
+        
         res.json(products)
     } catch (error) {
         
