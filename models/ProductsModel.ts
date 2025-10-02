@@ -1,5 +1,5 @@
 //import supabase exactly data base and we can do anything
-import { supabase } from "../config/connectToDataBase.js";
+import { supabase } from "../config/connectToDataBase";
 
 //function that make request to database and select all products
 export async function getAllProduct() {

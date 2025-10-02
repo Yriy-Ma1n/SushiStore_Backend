@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "nodenext",
-    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": ".",           // текущая папка как исходники
     "outDir": "dist",
-    "esModuleInterop": true,
     "strict": true,
-    "skipLibCheck": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
-  "include": ["app.ts"]
+  "include": ["**/*.ts"],    // все .ts файлы в проекте
+  "exclude": ["node_modules", "dist"]
 }

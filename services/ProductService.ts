@@ -1,6 +1,8 @@
 //import product models 
-import { getAllProduct, getProductById } from "../models/ProductsModel.js";
-// import type { products_attributes } from "../"
+import { getAllProduct, getProductById } from "../models/ProductsModel";
+
+import type { products_attributes } from "../types/productType";
+
 //function that get a data and an error
 export async function fetchProducts() {
     const { data, error } = await getAllProduct()
@@ -22,7 +24,7 @@ export async function fetchProduct(id: string) {
             price: number,
             img: string,
             description: string,
-            products_attributes: productt []
+            products_attributes: products_attributes[]
         }[] = data
        
     }

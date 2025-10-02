@@ -1,7 +1,7 @@
 
 import type { Request, Response, NextFunction } from "express";
 
-import { fetchProduct, fetchProducts } from "../services/ProductService.js";
+import { fetchProduct, fetchProducts } from "../services/ProductService";
 
 
 //function for route
