@@ -6,7 +6,7 @@ export async function getAllProduct() {
     
     return supabase
     .from("Products")
-    .select("*")
+    .select("*, products_attributes(*)")
 }
 //function that make request to database and select product by id
 export async function getProductById( id: string ) {

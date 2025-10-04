@@ -31,6 +31,7 @@ dotenv.config()
 app.listen(process.env.PORT, () => {
     console.log(`server was started on port ${process.env.PORT}`)
     console.log(`you have to make request to /some`)
+    
 
 })
 

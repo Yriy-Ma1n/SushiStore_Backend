@@ -1,7 +1,7 @@
 //import product models 
 import { getAllProduct, getCartItems, getProductById } from "../models/ProductsModel";
 
-import type { product, products_attributes } from "../types/productType";
+
 
 //function that get a data and an error
 export async function fetchProducts() {

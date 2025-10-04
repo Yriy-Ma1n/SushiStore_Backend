@@ -1,16 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "CommonJS",
-    "rootDir": ".",           // текущая папка как исходники
-    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "./dist",
+    "rootDir": "./",
     "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true
+    "esModuleInterop": true
   },
-  "include": ["**/*.ts"],    // все .ts файлы в проекте
-  "exclude": ["node_modules", "dist"]
+  "include": ["app.ts", "config/**/*", "routes/**/*"]
 }

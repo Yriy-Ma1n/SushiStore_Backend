@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node dist/app.js"
   },
@@ -28,6 +27,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "supertest": "^7.1.4",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
 }
