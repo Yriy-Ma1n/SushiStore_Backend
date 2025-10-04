@@ -15,3 +15,9 @@ export async function getProductById( id: string ) {
     .select("*, products_attributes(*)")
     .eq("id", id)
 }
+//function that make request to database and select item in cart
+export async function getCartItems() {
+    return supabase
+    .from("productInCart")
+    .select("*")
+}
