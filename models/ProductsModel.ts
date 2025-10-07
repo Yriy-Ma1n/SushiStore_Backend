@@ -17,6 +17,7 @@ export async function getProductById( id: string ) {
 }
 
 export async function getProductByQueryParams(index1:number, index2:number) {
+    
     return supabase
     .from("Products")
     .select()

@@ -28,9 +28,13 @@ export async function getProduct(req: Request, res: Response, next: NextFunction
     }
 }
 
-export async function getProductByQueryParams(req: Request, res: Response, next: NextFunction) {
+export async function getProductsQuery(req: Request, res: Response, next: NextFunction) {
+
+    const { start, end } = req.query
+
     try {
-        const product = await fetchRangeProduct(+req.params.start, +req.params.end)
+
+        const product = await fetchRangeProduct(+start!, +end!)
 
         res.json(product)
     } catch (error) {

@@ -24,8 +24,9 @@ export async function fetchProduct(id: string) {
 
 export async function fetchRangeProduct(index1:number, index2:number) {
     const { data, error } = await getProductByQueryParams(index1, index2)
-    
+
     if(error) throw error
+
 
     return data
 }
