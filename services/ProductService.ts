@@ -1,6 +1,5 @@
 //import product models 
-import { getAllProduct, getCartItems, getProductById } from "../models/ProductsModel";
-
+import { getAllProduct, getProductById } from "../models/ProductsModel";
 
 
 //function that get a data and an error
@@ -23,10 +22,3 @@ export async function fetchProduct(id: string) {
     return data
 }
 
-export async function fetchItemInCart() {
-    const { data, error } = await getCartItems()
-
-    if(error) throw error
-    
-    return data
-}
