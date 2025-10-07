@@ -1,7 +1,7 @@
 
 import type { Request, Response, NextFunction } from "express";
 
-import { fetchProduct, fetchProducts } from "../services/ProductService";
+import { fetchProduct, fetchProducts, fetchRangeProduct } from "../services/ProductService";
 
 
 //function for route
@@ -9,10 +9,10 @@ export async function getProducts(req: Request, res: Response, next: NextFunctio
 
     try {
         const products = await fetchProducts()
-        
+
         res.json(products)
     } catch (error) {
-        
+
         next(error)
     }
 
@@ -24,6 +24,17 @@ export async function getProduct(req: Request, res: Response, next: NextFunction
 
         res.json(product)
     } catch (error) {
+        next(error)
+    }
+}
+
+export async function getProductByQueryParams(req: Request, res: Response, next: NextFunction) {
+    try {
+        const product = await fetchRangeProduct(+req.params.start, +req.params.end)
+
+        res.json(product)
+    } catch (error) {
+
         next(error)
     }
 }

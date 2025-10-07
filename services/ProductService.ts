@@ -1,5 +1,5 @@
 //import product models 
-import { getAllProduct, getProductById } from "../models/ProductsModel";
+import { getAllProduct, getProductById, getProductByQueryParams } from "../models/ProductsModel";
 
 
 //function that get a data and an error
@@ -22,3 +22,10 @@ export async function fetchProduct(id: string) {
     return data
 }
 
+export async function fetchRangeProduct(index1:number, index2:number) {
+    const { data, error } = await getProductByQueryParams(index1, index2)
+    
+    if(error) throw error
+
+    return data
+}
