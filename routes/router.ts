@@ -1,14 +1,18 @@
-import { Router } from "express"
+import { Router } from "express";
 
+import {
+  getProducts,
+  getProduct,
+  getProductsQuery,
+  getRelatedProduct,
+} from "../controllers/ProductController";
 
+export const router = Router();
 
-import { getProducts, getProduct, getProductsQuery } from "../controllers/ProductController"
+router.get("/", getProducts);
 
-export const router = Router()
+router.get("/range", getProductsQuery);
 
-router.get('/', getProducts)
+router.get("/:id", getProduct);
 
-router.get('/range', getProductsQuery)
-
-router.get('/:id', getProduct)
-
+router.get("/:name", getRelatedProduct);
