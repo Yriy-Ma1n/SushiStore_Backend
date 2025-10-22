@@ -15,4 +15,4 @@ router.get("/range", getProductsQuery);
 
 router.get("/:id", getProduct);
 
-router.get("/:name", getRelatedProduct);
+router.get("/related/:name", getRelatedProduct);
