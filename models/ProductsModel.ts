@@ -19,6 +19,6 @@ export async function getProductByQueryParams(index1: number, index2: number) {
 }
 
 //function that returns 5 products that are not equal to the parameters
-async function relatedProduct(name: string) {
+export async function relatedProduct(name: string) {
   return supabase.from("Products").select("*").neq("name", name).range(0, 4);
 }
