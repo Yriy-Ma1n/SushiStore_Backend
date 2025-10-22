@@ -1,37 +1,28 @@
 //import some modules
-import express from "express"
-import cors from "cors"
-import dotenv from "dotenv"
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
-import { router } from "./routes/router"
-
-
+import { router as ProductRouter } from "./routes/router";
 
 //create express app
-const app = express()
+const app = express();
 
 //activate dotenv
-dotenv.config()
+dotenv.config();
 
 //middleware for cors
-app.use(cors())
+app.use(cors());
 
 //middleware for json
-app.use(express.json())
+app.use(express.json());
 
 //middleware for route
-app.use('/products', router)
+app.use("/products", ProductRouter);
 
-
-
-dotenv.config()
-
-
+dotenv.config();
 
 app.listen(process.env.PORT, () => {
-    console.log(`server was started on port ${process.env.PORT}`)
-    console.log(`you have to make request to /some`)
-    
-
-})
-
+  console.log(`server was started on port ${process.env.PORT}`);
+  console.log(`you have to make request to /some`);
+});
